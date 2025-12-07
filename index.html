@@ -53,7 +53,6 @@
       letter-spacing: .1px;
     }
 
-    /* Layout */
     .container{max-width:1100px;margin-inline:auto;padding:28px}
     header.site-header{position:sticky;top:0;z-index:50;background:linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(15,21,48,.7) 100%);backdrop-filter: blur(10px)}
     .nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
@@ -68,7 +67,6 @@
     .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:white;box-shadow:var(--shadow)}
     .btn-primary:hover{transform:translateY(-1px)}
 
-    /* Hero */
     .hero{padding:80px 28px 40px}
     .hero-inner{display:grid;grid-template-columns: 1.2fr .8fr;gap:38px;align-items:center}
     .hero h1{font-size: clamp(2rem, 3.8vw, 3.2rem);line-height:1.1;margin:0 0 14px}
@@ -85,7 +83,6 @@
 </head>
 
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container nav" role="navigation">
       <a href="#top" class="brand">
@@ -102,13 +99,12 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
 
-        <!-- ⭐ ADDED CALL BUTTON IN HEADER -->
-        <a href="tel:+18883193280" class="btn btn-primary">Call +1 (888) 319-3280</a>
+        <!-- ⭐ UPDATED HEADER CALL BUTTON -->
+        <a href="tel:+18888486678" class="btn btn-primary">Call +1 (888) 848-6678</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero" id="start">
     <div class="container hero-inner">
       <div>
@@ -116,11 +112,12 @@
         <h1>How to Get Reliable <span style="background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">Radio Support Service</span></h1>
         <p>Whether you run events, manage a fleet, operate an amateur radio setup, or broadcast on air, this blog walks you through choosing the right radio support service.</p>
 
-        <!-- ⭐ ADDED CALL BUTTON IN HERO -->
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn btn-primary" href="#contact">Request a Callback</a>
           <a class="btn" style="background:rgba(124,158,255,.12);color:white;border:1px solid rgba(124,158,255,.22)" href="#steps">See the Steps</a>
-          <a class="btn btn-primary" href="tel:+18883193280">Call +1 (888) 319-3280</a>
+
+          <!-- ⭐ UPDATED HERO CALL BUTTON -->
+          <a class="btn btn-primary" href="tel:+18888486678">Call +1 (888) 848-6678</a>
         </div>
 
         <div class="hero-grid">
@@ -139,4 +136,3 @@
 
 </body>
 </html>
-
