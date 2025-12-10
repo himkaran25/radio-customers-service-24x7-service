@@ -10,19 +10,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* (your entire CSS unchanged) */
+    /* (your original CSS unchanged) */
   </style>
 </head>
+
 <body>
+
   <!-- Header -->
   <header class="site-header">
     <div class="container nav" role="navigation" aria-label="Primary">
       <a href="#top" class="brand">
         <span class="logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a1 1 0 0 1 1 1v2.06a7 7 0 0 1 5.94 5.94H21a1 1 0 1 1 0 2h-2.06A7 7 0 0 1 13 18.94V21a1 1 0 1 1-2 0v-2.06A7 7 0 0 1 5.06 11H3a1 1 0 1 1 0-2h2.06A7 7 0 0 1 11 5.06V3a1 1 0 0 1 1-1Zm0 6a5 5 0 1 0 0 10A5 5 0 0 0 12 8Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 0 1 1 1v2.06a7 7 0 0 1 5.94 5.94H21a1 1 0 1 1 0 2h-2.06A7 7 0 0 1 13 18.94V21a1 1 0 1 1-2 0v-2.06A7 7 0 0 1 5.06 11H3a1 1 0 1 1 0-2h2.06A7 7 0 0 1 11 5.06V3a1 1 0 0 1 1-1Zm0 6a5 5 0 1 0 0 10A5 5 0 0 0 12 8Z"/></svg>
         </span>
         <span>Radio Support Guide</span>
       </a>
+
       <nav class="links" aria-label="Sections">
         <a href="#start">Start</a>
         <a href="#types">Types</a>
@@ -30,8 +33,8 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
 
-        <!-- UPDATED BUTTON -->
-        <a href="tel:18776266658" class="btn btn-primary">Call Now</a>
+        <!-- UPDATED CALL BUTTON -->
+        <a href="tel:+18776266658" class="btn btn-primary">Call +1 (877) 626-6658</a>
       </nav>
     </div>
   </header>
@@ -41,13 +44,19 @@
     <div class="container hero-inner">
       <div>
         <p class="eyebrow">Your complete, no-stress guide</p>
-        <h1>How to Get Reliable <span style="background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">Radio Support Service</span></h1>
-        <p>Whether you run events, manage a fleet, operate an amateur radio setup, or broadcast on air...</p>
 
+        <h1>
+          How to Get Reliable 
+          <span style="background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">
+            Radio Support Service
+          </span>
+        </h1>
+
+        <p>Whether you run events, manage a fleet, operate an amateur radio setup, or broadcast on air—this guide walks you through everything you need to know.</p>
+
+        <!-- CTA BUTTONS -->
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <!-- UPDATED BUTTON -->
-          <a class="btn btn-primary" href="tel:18776266658">Call 187-762-66658</a>
-
+          <a class="btn btn-primary" href="tel:+18776266658">Call Now: +1 (877) 626-6658</a>
           <a class="btn" style="background:rgba(124,158,255,.12);color:white;border:1px solid rgba(124,158,255,.22)" href="#steps">See the Steps</a>
         </div>
 
@@ -58,11 +67,66 @@
         </div>
       </div>
 
-      <div class="hero-card" aria-label="Highlights">
+      <div class="hero-card">
         <h3 class="mt-0">What counts as “Radio Support”?</h3>
-        <p class="mb-0">Installation...</p>
+        <p class="mb-0">Installation, maintenance, troubleshooting, tuning, frequency coordination, repeater setup, and more.</p>
       </div>
     </div>
   </section>
 
-  <!-- (rest of your original HTML remains unchanged) -->
+  <!-- Your middle content (Types, Steps, Pricing, FAQ, etc.) remains unchanged -->
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-wrapper">
+
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+
+        <p><strong>Need help right now?</strong> Call us at 
+          <a href="tel:+18776266658" style="color:var(--brand);font-weight:700">
+            +1 (877) 626-6658
+          </a>
+        </p>
+
+        <p>We usually respond within minutes.</p>
+      </div>
+
+      <div class="contact-form">
+        <form>
+          <label>Name</label>
+          <input type="text" required>
+
+          <label>Email</label>
+          <input type="email" required>
+
+          <label>Your Message</label>
+          <textarea rows="5" required></textarea>
+
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div>
+        <h4>Support</h4>
+        <a href="#faq">FAQ</a><br>
+        <a href="#contact">Contact Form</a><br>
+        <a href="tel:+18776266658">Call: +1 (877) 626-6658</a><br>
+      </div>
+
+      <div>
+        <p>© 2025 Radio Support Guide. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
