@@ -1,136 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Radio Support Guide | Informational Blog</title>
-  <meta name="description" content="Radio Support Guide is an independent informational blog providing general articles and guides about satellite radio topics." />
-  <meta name="robots" content="index, follow" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Get Radio Support Service — Complete Guide</title>
+  <meta name="description" content="A beautiful, responsive, blog-style guide on how to get radio support service: what to expect, how to choose a provider, pricing, FAQs, and a contact form."/>
+  <meta name="author" content="Your Brand"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    :root{
+      --bg: #0b1020;
+      --bg-soft: #0f1530;
+      --card: #121936;
+      --text: #eef2ff;
+      --muted: #b6c2ff;
+      --brand: #7c9eff;
+      --brand-2:#8be9fd;
+      --accent:#c084fc;
+      --ring: rgba(124,158,255,.4);
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --shadow: 0 10px 30px rgba(20, 24, 62, 0.6), 0 2px 8px rgba(0,0,0,.3);
     }
-    header {
-      background: #1f2937;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f7fb;
+        --bg-soft: #ffffff;
+        --card: #ffffff;
+        --text: #0e1325;
+        --muted: #4b5563;
+        --brand: #335ef7;
+        --brand-2:#06b6d4;
+        --accent:#7c3aed;
+        --ring: rgba(51,94,247,.25);
+        --shadow: 0 8px 24px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+      }
     }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(124,158,255,.20), transparent 60%),
+                  radial-gradient(1000px 600px at 100% 0%, rgba(139,233,253,.15), transparent 60%),
+                  linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+      line-height:1.65;
+      letter-spacing: .1px;
     }
-    h1, h2 {
-      color: #111827;
+
+    /* Layout */
+    .container{max-width:1100px;margin-inline:auto;padding:28px}
+    header.site-header{position:sticky;top:0;z-index:50;background:linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(15,21,48,.7) 100%);backdrop-filter: blur(10px)}
+    .nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+    .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow: var(--shadow);display:grid;place-items:center}
+    .brand .logo svg{width:20px;height:20px;fill:white}
+    .brand span{font-weight:800;font-size:1.05rem;letter-spacing:.4px}
+    nav .links{display:flex;gap:18px;flex-wrap:wrap}
+    nav .links a{color:var(--muted);text-decoration:none;font-weight:600;opacity:.95}
+    nav .links a:hover{color:var(--text)}
+
+    .btn{appearance:none;border:0;border-radius:16px;padding:10px 16px;font-weight:700;letter-spacing:.3px;cursor:pointer;transition:.2s transform,.2s box-shadow,.2s background}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:white;box-shadow:var(--shadow)}
+    .btn-primary:hover{transform:translateY(-1px)}
+
+    /* Hero */
+    .hero{padding:80px 28px 40px}
+    .hero-inner{display:grid;grid-template-columns: 1.2fr .8fr;gap:38px;align-items:center}
+    .hero h1{font-size: clamp(2rem, 3.8vw, 3.2rem);line-height:1.1;margin:0 0 14px}
+    .hero p{margin:0 0 22px;color:var(--muted);font-size:1.05rem}
+    .hero-card{background: linear-gradient(180deg, rgba(124,158,255,.10) 0%, rgba(0,0,0,0) 100%), var(--card);border:1px solid rgba(124,158,255,.12);padding:22px;border-radius:22px;box-shadow:var(--shadow)}
+    .hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .metric{background:rgba(124,158,255,.10);border:1px solid rgba(124,158,255,.16);border-radius:16px;padding:14px 16px}
+    .metric h4{margin:0;font-size:1.6rem}
+    .metric span{display:block;color:var(--muted);font-size:.9rem}
+
+    /* Content */
+    article.blog{background:transparent}
+    .prose{max-width:780px;margin-inline:auto}
+    .prose h2{font-size:clamp(1.4rem,2.5vw,2rem);margin:36px 0 12px}
+    .prose h3{font-size:1.2rem;margin:26px 0 6px}
+    .prose p{color:var(--text);opacity:.95}
+    .note{border-left:4px solid var(--brand);background:linear-gradient(0deg, rgba(124,158,255,.08), rgba(124,158,255,.04));padding:14px 16px;border-radius:12px;margin:18px 0}
+
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width: 980px){
+      .hero-inner{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
     }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: #111827;
-      color: #d1d5db;
-      text-align: center;
-      font-size: 14px;
+
+    .card{background:var(--card);border:1px solid rgba(124,158,255,.14);border-radius:22px;padding:20px;box-shadow: var(--shadow)}
+    .card h3{margin-top:0}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;font-size:.8rem;font-weight:700;color:white;background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+
+    .checklist{list-style:none;padding:0;margin:0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;margin:10px 0}
+    .checklist svg{flex:0 0 18px;margin-top:2px}
+
+    .table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;border:1px solid rgba(124,158,255,.16)}
+    .table th,.table td{padding:14px 16px;text-align:left}
+    .table thead th{background:linear-gradient(0deg, rgba(124,158,255,.10), rgba(124,158,255,.04))}
+    .table tbody tr:nth-child(odd){background:rgba(124,158,255,.05)}
+    .badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.75rem;font-weight:700;background:rgba(34,197,94,.15);color:var(--success)}
+
+    /* FAQ */
+    .faq{margin-top:10px}
+    details{background:var(--card);border:1px solid rgba(124,158,255,.14);border-radius:16px;padding:14px 16px;margin:12px 0;box-shadow: var(--shadow)}
+    details[open]{outline:2px solid var(--ring)}
+    summary{cursor:pointer;font-weight:700}
+
+    /* CTA Banner */
+    .cta{margin:40px auto 10px;background:linear-gradient(135deg, rgba(124,158,255,.18), rgba(192,132,252,.22));border:1px solid rgba(124,158,255,.25);border-radius:24px;padding:24px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}
+
+    /* Contact form */
+    form{display:grid;gap:12px}
+    label{font-weight:700}
+    input, select, textarea{width:100%;border:1px solid rgba(124,158,255,.25);background:rgba(124,158,255,.07);color:var(--text);padding:12px 14px;border-radius:12px}
+    input:focus, select:focus, textarea:focus{outline:2px solid var(--ring)}
+
+    /* Footer */
+    footer{margin-top:60px;padding:30px 0;color:var(--muted)}
+    .footer-grid{display:grid;gap:18px;grid-template-columns:2fr 1fr 1fr}
+    .footer-grid a{color:var(--muted);text-decoration:none}
+    .footer-grid a:hover{color:var(--text)}
+    @media(max-width:900px){
+      .footer-grid{grid-template-columns:1fr}
     }
-    .disclaimer {
-      background: #fef3c7;
-      border: 1px solid #fde68a;
-      padding: 15px;
-      margin-top: 25px;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
+
+    /* Utility */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .mb-0{margin-bottom:0}
+    .mt-0{margin-top:0}
   </style>
 </head>
-
 <body>
-
-  <header>
-    <h1>Radio Support Guide</h1>
-    <p>Independent Informational Blog</p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a href="#top" class="brand">
+        <span class="logo" aria-hidden="true">
+          <!-- Radio Tower Icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a1 1 0 0 1 1 1v2.06a7 7 0 0 1 5.94 5.94H21a1 1 0 1 1 0 2h-2.06A7 7 0 0 1 13 18.94V21a1 1 0 1 1-2 0v-2.06A7 7 0 0 1 5.06 11H3a1 1 0 1 1 0-2h2.06A7 7 0 0 1 11 5.06V3a1 1 0 0 1 1-1Zm0 6a5 5 0 1 0 0 10A5 5 0 0 0 12 8Z"/></svg>
+        </span>
+        <span>Radio Support Guide</span>
+      </a>
+      <nav class="links" aria-label="Sections">
+        <a href="#start">Start</a>
+        <a href="#types">Types</a>
+        <a href="#steps">Steps</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-primary">Get Help</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>About This Website</h2>
-    <p>
-      Radio Support Guide is an <strong>independent informational blog</strong> operated by an individual.
-      The purpose of this website is to publish general articles, guides, and educational content
-      related to satellite radio topics.
-    </p>
-
-    <p>
-      All content provided on this website is for <strong>informational and educational purposes only</strong>.
-      Visitors are encouraged to contact official service providers directly for account-specific or technical assistance.
-    </p>
-
-    <h2>What We Do</h2>
-    <ul>
-      <li>Publish general informational articles</li>
-      <li>Share educational guides about satellite radio topics</li>
-      <li>Provide publicly available information in written form</li>
-    </ul>
-
-    <h2>What We Do NOT Do</h2>
-    <ul>
-      <li>We do not provide customer support services</li>
-      <li>We do not offer technical assistance</li>
-      <li>We do not sell products or services</li>
-      <li>We do not represent or act on behalf of any satellite radio company</li>
-    </ul>
-
-    <div class="disclaimer">
-      <strong>Disclaimer:</strong><br />
-      Radio Support Guide is <strong>not affiliated with, endorsed by, or connected to</strong>
-      any satellite radio provider or brand. This website does not offer customer support,
-      technical services, or account assistance.
+  <!-- Hero -->
+  <section class="hero" id="start">
+    <div class="container hero-inner">
+      <div>
+        <p class="eyebrow">Your complete, no‑stress guide</p>
+        <h1>How to Get Reliable <span style="background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">Radio Support Service</span></h1>
+        <p>Whether you run events, manage a fleet, operate an amateur radio setup, or broadcast on air, this blog walks you through choosing the right radio support service—setup, maintenance, licensing guidance, and fast troubleshooting included.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#contact">Request a Callback</a>
+          <a class="btn" style="background:rgba(124,158,255,.12);color:white;border:1px solid rgba(124,158,255,.22)" href="#steps">See the Steps</a>
+        </div>
+        <div class="hero-grid" aria-hidden="true">
+          <div class="metric"><h4>24/7</h4><span>Emergency Support</span></div>
+          <div class="metric"><h4>72h</h4><span>Average Setup Time</span></div>
+          <div class="metric"><h4>98%</h4><span>Issue Resolution Rate</span></div>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Highlights">
+        <h3 class="mt-0">What counts as “Radio Support”?</h3>
+        <p class="mb-0">Installation, programming, coverage planning, interference checks, antenna tuning, licensing assistance, firmware updates, repairs, and user training—delivered on-site or remote.</p>
+      </div>
     </div>
+  </section>
 
-    <h2>Contact</h2>
-    <p>
-      For general questions or feedback about this website, you may contact us by email:
-    </p>
-    <p>
-      📧 <strong>contact@radiosupportguide.com</strong>
-    </p>
+  <!-- Article Content -->
+  <article class="blog">
+    <div class="container prose">
 
-    <p>
-      Country of operation: <strong>India</strong>
-    </p>
+      <section id="types" class="grid cols-3">
+        <div class="card">
+          <h3>Two‑Way & LMR (Commercial)</h3>
+          <p>Support for handhelds, mobiles, and repeaters used by logistics, hospitality, security, and construction—often on UHF/VHF with analog, DMR, NXDN, or P25 systems.</p>
+        </div>
+        <div class="card">
+          <h3>Amateur / Ham Radio</h3>
+          <p>Station build‑outs, antenna selection, feedline testing, grounding, digital modes (FT8, D‑STAR), and contest‑ready performance for licensed operators.</p>
+        </div>
+        <div class="card">
+          <h3>Broadcast & Events</h3>
+          <p>RF planning for OB vans and stages, intercoms (UHF/DECT), IFB, STL links, temporary spectrum coordination, and failover plans for live shows.</p>
+        </div>
+      </section>
 
-    <h2>Privacy</h2>
-    <p>
-      This website does not collect sensitive personal information.
-      Advertising on this site may be provided by third-party services such as Google Ads.
-    </p>
+      <section id="steps">
+        <h2>Step‑by‑Step: Getting the Right Support</h2>
+        <ol class="card" style="padding-left:22px">
+          <li><strong>Define the use‑case:</strong> coverage area, user count, indoors/outdoors, and any high‑noise zones.</li>
+          <li><strong>Inventory your gear:</strong> radio models, firmware, batteries, headsets, antennas, repeaters, cables.</li>
+          <li><strong>Check compliance:</strong> licenses or permit requirements for your jurisdiction and band plan.</li>
+          <li><strong>Ask providers for a site survey:</strong> they should measure RSSI/SINR and assess line‑of‑sight and intermod risks.</li>
+          <li><strong>Review a written support plan:</strong> SLAs, response times, loaner units, spares, and maintenance cycles.</li>
+          <li><strong>Run a pilot:</strong> test channels/codeplugs, record call quality and dead zones before full rollout.</li>
+          <li><strong>Document & train:</strong> quick‑start guides, channel maps, and a contact tree for incidents.</li>
+        </ol>
 
-    <p>
-      Please review our <a href="/privacy-policy.html">Privacy Policy</a> for more information.
-    </p>
-  </main>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>What a Good Provider Delivers</h3>
+            <ul class="checklist">
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+                Coverage heatmaps and interference analysis.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+                Codeplug programming and fleet templates.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+                On‑site installation, testing & training.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+                SLA‑backed support with spares and loaners.
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Questions to Ask</h3>
+            <ul class="checklist">
+              <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>What radios & bands do you specialize in (UHF/VHF/700‑800MHz)?</li>
+              <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Do you provide licensing guidance and frequency coordination?</li>
+              <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>What’s your average response time and escalation path?</li>
+              <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Can you share references from similar deployments?</li>
+            </ul>
+          </div>
+        </div>
 
-  <footer>
-    <p>
-      © <span id="year"></span> Radio Support Guide — Independent Informational Website
-    </p>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </footer>
+        <div class="note"><strong>Pro tip:</strong> Ask for a <em>codeplug backup</em> and a simple change‑request process so channel updates don’t break your fleet.</div>
+      </section>
 
-</body>
-</html>
+      <section id="pricing">
+        <h2>Typical Pricing (Guidance)</h2>
+        <p class="note">Actual costs vary by region and project scope. Use this table for rough planning.</p>
+        <div class="card" role="region" aria-label="Pricing table">
+          <table class="table" aria-describedby="pricing-desc">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>What’s Included</th>
+                <th>Typical Cost</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Site Survey</td>
+                <td>Coverage tests, interference scan, report</td>
+                <td>$300–$1,200</td>
+                <td><span class="badge">One‑time</span></td>
+              </tr>
+              <tr>
+                <td>Install & Programming</td>
+                <td>Mounts, antennas, power, codeplugs</td>
+                <td>$80–$150/hr</td>
+                <td>+ materials</td>
+              </tr>
+              <tr>
+                <td>Managed Support (SLA)</td>
+                <td>Helpdesk, spares, firmware, on‑site visits</td>
+                <td>$40–$90/radio/mo</td>
+                <td>Tiered by response time</td>
+              </tr>
+              <tr>
+                <td>Emergency Call‑out</td>
+                <td>After‑hours fix, loaner units</td>
+                <td>$250–$600</td>
+                <td>Within service area</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="pricing-desc" class="sr-only">Pricing examples to estimate budgets for radio support services.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Provider Shortlist Checklist</h
 
 
